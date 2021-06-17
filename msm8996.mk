@@ -386,7 +386,7 @@ PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service
 
 # usb debugging on boot only for eng builds
-ifneq (,$(filter eng, $(TARGET_BUILD_VARIANT)))
+ifneq (,$(filter userdebug, $(TARGET_BUILD_VARIANT)))
   PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.usb.config=mtp,adb \
     ro.adb.secure=0 \
